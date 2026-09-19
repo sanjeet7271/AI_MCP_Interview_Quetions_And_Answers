@@ -1,3 +1,4 @@
+
 # Prompt Types — SDET Interview Notes
 
 There is **no single official number** of prompt types. For an SDET/AI interview, you can remember these **8 common types**:
@@ -15,5 +16,22 @@ There is **no single official number** of prompt types. For an SDET/AI interview
 
 ### 1. Zero-shot Prompt
 
-```text
 Generate Selenium test cases for login.
+
+### 2. Few-shot Prompt
+
+Here are 3 examples of our test cases.
+Now generate 10 more in the same format.
+
+### 3. Role-based Prompt
+
+Act as a Senior SDET and review this automation framework.
+
+
+### 4. Structured Prompt
+
+Analyze this API response and return the result in JSON format.
+
+## Interview One-liner
+
+> "There is no fixed number of prompt types, but common techniques include zero-shot, one-shot, few-shot, role-based, instruction, context-based, reasoning, and structured prompts."
