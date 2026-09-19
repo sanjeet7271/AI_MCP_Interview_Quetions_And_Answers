@@ -1,0 +1,19 @@
+# Prompt Types — SDET Interview Notes
+
+There is **no single official number** of prompt types. For an SDET/AI interview, you can remember these **8 common types**:
+
+1. **Zero-shot Prompt** – Ask directly without giving an example.
+2. **One-shot Prompt** – Give one example before asking.
+3. **Few-shot Prompt** – Give multiple examples.
+4. **Role-based Prompt** – Assign a role, e.g., "Act as a QA Automation Engineer."
+5. **Instruction Prompt** – Give clear instructions for a specific task.
+6. **Context-based Prompt** – Provide background/context along with the question.
+7. **Chain-of-Thought / Reasoning Prompt** – Ask AI to reason through a complex task step by step.
+8. **Structured Prompt** – Specify the required output format, such as JSON, table, or Markdown.
+
+## SDET Examples
+
+### 1. Zero-shot Prompt
+
+```text
+Generate Selenium test cases for login.
