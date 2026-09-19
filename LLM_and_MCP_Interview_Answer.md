@@ -107,3 +107,13 @@ Do **not** say:
 Instead say:
 
 > **"An LLM can answer general questions without MCP, but it cannot directly access or act on many external systems without an appropriate integration such as MCP."**
+
+
+
+* **Prompt:** A set of instructions given to an AI to generate a specific response or perform a specific task.
+* **AI Agent:** An AI system that can **reason, use tools, make decisions, and perform multiple steps** to achieve a goal.
+
+**SDET example:**
+
+* **Prompt:** “Generate Selenium test cases for login.”
+* **AI Agent:** “Analyze failed Selenium tests, check logs, identify the issue, fix it, and rerun the tests.”
