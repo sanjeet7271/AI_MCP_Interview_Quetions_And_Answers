@@ -36,3 +36,30 @@
                                 ├── get_screenshot()
                                 ├── trigger_jenkins()
                                 └── create_jira_bug()
+
+## Type of data accessed by MCP server
+                                       AI APPLICATION
+                                             │
+                                             ▼
+                                        MCP CLIENT
+                                             │
+                                       JSON-RPC 2.0
+                                             │
+                                             ▼
+                                       MCP SERVER
+                                             │
+                     ┌───────────┬───────────┼───────────┬───────────┐
+                     ▼           ▼           ▼           ▼           ▼
+                 DATABASE      FILES       GIT       JENKINS     BROWSER
+                     │           │           │           │           │
+                     ▼           ▼           ▼           ▼           ▼
+                   MySQL       JSON       GitHub     CI/CD       Selenium
+                   Oracle       XML       GitLab     Pipeline    Playwright
+                   MongoDB      PDF       Bitbucket  TestNG
+                     │
+                     ├───────────────┐
+                     ▼               ▼
+                   LOGS          MONITORING
+                     │               │
+                  Splunk          Datadog
+                  CloudWatch
