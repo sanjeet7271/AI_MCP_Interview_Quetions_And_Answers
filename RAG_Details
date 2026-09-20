@@ -1,4 +1,3 @@
-````md
 # RAG — SDET / AI Interview Notes
 
 ## 1. What is RAG?
@@ -9,7 +8,6 @@
 
 Instead of asking the LLM to rely only on its training knowledge:
 
-```text
 User Question
      ↓
     RAG
@@ -19,7 +17,7 @@ Retrieve relevant data
     LLM
      ↓
    Answer
-````
+
 
 ### SDET Example
 
@@ -48,7 +46,6 @@ A typical RAG system has **two major pipelines**.
 
 This prepares your data for retrieval.
 
-```text
 Documents
    ↓
 Load Data
@@ -60,11 +57,11 @@ Chunking
 Embedding
    ↓
 Vector Database
-```
+
 
 ### SDET Example
 
-```text
+
 Jenkins Logs
 API Docs
 Test Cases
@@ -74,15 +71,13 @@ Chunking
 Embeddings
    ↓
 Vector DB
-```
 
----
 
 ## B. Retrieval / Query Pipeline
 
 This happens when the user asks a question.
 
-```text
+
 User Question
       ↓
 Query Embedding
@@ -96,9 +91,7 @@ Relevant Documents
 LLM + Context
       ↓
 Final Answer
-```
 
----
 
 # 3. How Many Types of RAG?
 
@@ -110,7 +103,7 @@ For an interview, remember these **5 common approaches**:
 
 Simple retrieval process:
 
-```text
+
 Question
  ↓
 Retrieve Documents
@@ -118,11 +111,9 @@ Retrieve Documents
 LLM
  ↓
 Answer
-```
 
 Used for straightforward document-based questions.
 
----
 
 ## 2. Advanced RAG
 
@@ -134,7 +125,6 @@ Adds techniques such as:
 * Reranking
 * Hybrid search
 
-```text
 Question
  ↓
 Query Optimization
@@ -146,15 +136,12 @@ Reranking
 LLM
  ↓
 Answer
-```
 
----
 
 ## 3. Modular RAG
 
 Different RAG components are modular and can be independently changed.
 
-```text
 Query
  ↓
 Retriever
@@ -164,11 +151,10 @@ Reranker
 Context Processor
  ↓
 LLM
-```
+
 
 You can replace or customize individual components.
 
----
 
 ## 4. Graph RAG
 
@@ -176,7 +162,6 @@ Uses a **Knowledge Graph** to understand relationships between entities.
 
 ### SDET Example
 
-```text
 Payment API
      ↓
 Payment Service
@@ -186,17 +171,14 @@ Database
 Payment Test
      ↓
 JIRA Defect
-```
 
 This is useful when relationships between information are important.
 
----
 
 ## 5. Agentic RAG
 
 An **AI Agent controls the retrieval process** and decides what information it needs.
 
-```text
 User
  ↓
 AI Agent
@@ -212,11 +194,8 @@ Search Again if Required
 LLM
  ↓
 Final Answer
-```
 
 This is particularly useful for **AI + SDET automation**.
-
----
 
 # 4. RAG vs LLM
 
@@ -227,21 +206,18 @@ This is particularly useful for **AI + SDET automation**.
 | Doesn't automatically know company documents | Can retrieve company documents    |
 | General-purpose                              | Can be customized with your data  |
 
----
 
 # 5. RAG vs MCP
 
 **RAG and MCP are not the same thing.**
 
-```text
 RAG → Helps AI retrieve relevant knowledge
 
 MCP → Helps AI/agents connect to and use external tools/data
-```
 
 ### Combined Architecture
 
-```text
+
                  AI Agent
                     |
           ┌─────────┴─────────┐
@@ -255,7 +231,6 @@ MCP → Helps AI/agents connect to and use external tools/data
                    LLM
                     ↓
               Final Result
-```
 
 ### SDET Use Cases
 
@@ -270,7 +245,6 @@ This combination can be useful for:
 * Defect investigation
 * Regression test selection
 
----
 
 # 6. Interview-Ready Answer
 
@@ -280,5 +254,3 @@ This combination can be useful for:
 
 > **RAG = Retrieve relevant information → provide it as context to the LLM → generate a better answer.**
 
-```
-```
