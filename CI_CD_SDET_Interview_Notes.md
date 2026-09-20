@@ -1,9 +1,8 @@
-
-````md
-# CI/CD — SDET Interview Notes
 <img width="598" height="293" alt="image" src="https://github.com/user-attachments/assets/361d7dbb-4a61-46a6-a7b9-875d3d82ac4f" />
 <img width="536" height="380" alt="image" src="https://github.com/user-attachments/assets/4c52c21b-ef72-4ca2-a0ac-681df5d59305" />
 <img width="569" height="355" alt="image" src="https://github.com/user-attachments/assets/35d5a41e-eefc-49b0-b35b-0bc31ec6439a" />
+````md
+# CI/CD — SDET Interview Notes
 
 
 ## 1. Continuous Integration (CI)
