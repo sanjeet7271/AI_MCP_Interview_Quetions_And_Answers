@@ -1,0 +1,284 @@
+````md
+# RAG — SDET / AI Interview Notes
+
+## 1. What is RAG?
+
+**RAG = Retrieval-Augmented Generation.**
+
+> RAG is a technique where an AI model retrieves relevant information from external data and uses that information to generate a more accurate answer.
+
+Instead of asking the LLM to rely only on its training knowledge:
+
+```text
+User Question
+     ↓
+    RAG
+     ↓
+Retrieve relevant data
+     ↓
+    LLM
+     ↓
+   Answer
+````
+
+### SDET Example
+
+Suppose your company has:
+
+* Automation framework documentation
+* API specifications
+* Test cases
+* Jenkins logs
+* Defect history
+* Application documentation
+
+You ask:
+
+> "Why is the payment test failing?"
+
+RAG can retrieve relevant **logs + API documentation + previous defects + test information** and provide an answer based on that data.
+
+---
+
+# 2. RAG Pipeline
+
+A typical RAG system has **two major pipelines**.
+
+## A. Indexing / Ingestion Pipeline
+
+This prepares your data for retrieval.
+
+```text
+Documents
+   ↓
+Load Data
+   ↓
+Clean / Preprocess
+   ↓
+Chunking
+   ↓
+Embedding
+   ↓
+Vector Database
+```
+
+### SDET Example
+
+```text
+Jenkins Logs
+API Docs
+Test Cases
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+Vector DB
+```
+
+---
+
+## B. Retrieval / Query Pipeline
+
+This happens when the user asks a question.
+
+```text
+User Question
+      ↓
+Query Embedding
+      ↓
+Retriever
+      ↓
+Vector Database
+      ↓
+Relevant Documents
+      ↓
+LLM + Context
+      ↓
+Final Answer
+```
+
+---
+
+# 3. How Many Types of RAG?
+
+There is **no single official number of RAG types**.
+
+For an interview, remember these **5 common approaches**:
+
+## 1. Naive / Basic RAG
+
+Simple retrieval process:
+
+```text
+Question
+ ↓
+Retrieve Documents
+ ↓
+LLM
+ ↓
+Answer
+```
+
+Used for straightforward document-based questions.
+
+---
+
+## 2. Advanced RAG
+
+Adds techniques such as:
+
+* Better chunking
+* Metadata filtering
+* Query rewriting
+* Reranking
+* Hybrid search
+
+```text
+Question
+ ↓
+Query Optimization
+ ↓
+Hybrid Retrieval
+ ↓
+Reranking
+ ↓
+LLM
+ ↓
+Answer
+```
+
+---
+
+## 3. Modular RAG
+
+Different RAG components are modular and can be independently changed.
+
+```text
+Query
+ ↓
+Retriever
+ ↓
+Reranker
+ ↓
+Context Processor
+ ↓
+LLM
+```
+
+You can replace or customize individual components.
+
+---
+
+## 4. Graph RAG
+
+Uses a **Knowledge Graph** to understand relationships between entities.
+
+### SDET Example
+
+```text
+Payment API
+     ↓
+Payment Service
+     ↓
+Database
+     ↓
+Payment Test
+     ↓
+JIRA Defect
+```
+
+This is useful when relationships between information are important.
+
+---
+
+## 5. Agentic RAG
+
+An **AI Agent controls the retrieval process** and decides what information it needs.
+
+```text
+User
+ ↓
+AI Agent
+ ↓
+Decide what to search
+ ↓
+Retrieve Information
+ ↓
+Analyze Results
+ ↓
+Search Again if Required
+ ↓
+LLM
+ ↓
+Final Answer
+```
+
+This is particularly useful for **AI + SDET automation**.
+
+---
+
+# 4. RAG vs LLM
+
+| LLM                                          | RAG                               |
+| -------------------------------------------- | --------------------------------- |
+| Uses model knowledge                         | Uses model + external knowledge   |
+| Knowledge may become outdated                | Can retrieve current/private data |
+| Doesn't automatically know company documents | Can retrieve company documents    |
+| General-purpose                              | Can be customized with your data  |
+
+---
+
+# 5. RAG vs MCP
+
+**RAG and MCP are not the same thing.**
+
+```text
+RAG → Helps AI retrieve relevant knowledge
+
+MCP → Helps AI/agents connect to and use external tools/data
+```
+
+### Combined Architecture
+
+```text
+                 AI Agent
+                    |
+          ┌─────────┴─────────┐
+          ↓                   ↓
+         RAG                 MCP
+          ↓                   ↓
+ Test Docs / Defects    Jenkins / Git / DB
+          ↓                   ↓
+          └─────────┬─────────┘
+                    ↓
+                   LLM
+                    ↓
+              Final Result
+```
+
+### SDET Use Cases
+
+This combination can be useful for:
+
+* AI-powered test failure analysis
+* Test case generation
+* Test data generation
+* Framework documentation
+* Self-healing automation
+* Jenkins failure analysis
+* Defect investigation
+* Regression test selection
+
+---
+
+# 6. Interview-Ready Answer
+
+> **"RAG stands for Retrieval-Augmented Generation. It allows an LLM to retrieve relevant information from external sources such as documents, databases, or vector stores and use that context to generate an answer. A typical RAG architecture has an ingestion pipeline and a retrieval pipeline. Common approaches include Basic RAG, Advanced RAG, Modular RAG, Graph RAG, and Agentic RAG."**
+
+## One-Line Definition
+
+> **RAG = Retrieve relevant information → provide it as context to the LLM → generate a better answer.**
+
+```
+```
