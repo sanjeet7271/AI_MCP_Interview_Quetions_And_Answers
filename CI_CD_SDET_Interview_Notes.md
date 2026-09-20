@@ -1,4 +1,3 @@
-I can format it as Markdown, but I can’t create the downloadable file in this response. Here is the complete `.md` content you can save as `CI_CD_SDET_Interview_Notes.md`:
 
 ````md
 # CI/CD — SDET Interview Notes
